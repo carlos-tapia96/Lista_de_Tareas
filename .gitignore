@@ -115,7 +115,7 @@ htmlcov/
 *.coverage
 htmlcov/
 .env
-*.py
+
 
 *.pyc
 *.pyo
