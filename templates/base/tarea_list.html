@@ -8,9 +8,9 @@
         <h3 style="margin:0">Tienes <i>{{count}}</i> tarea{{count|pluralize}} incompleta{{count|pluralize}}</h3>
     </div>
     {% if request.user.is_authenticated %}
-    <a href="">Salir</a>
+    <a href="{% url 'logout' %}">Salir</a>
     {% else %}
-    <a href="">Ingresar</a>
+    <a href="{% url 'login' %}">Ingresar</a>
 {% endif %}
 </div>
 
