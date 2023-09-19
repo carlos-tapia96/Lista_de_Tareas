@@ -25,16 +25,16 @@
 <div class="envoltorio-items-tarea">
     {% for tarea in tareas %}
     <div class="envoltorio-tarea">
-        {% if tarea.completo %}
+        {% if tarea.completed %}
         <div class="titulo-tarea">
             <div class="icono-tarea-completa"></div>
-            <i><s><a href="{% url 'editar-tarea' tarea.id %}">{{tarea}}</a></s></i>
+            <i><a href="{% url 'editar-tarea' tarea.id %}">{{tarea}}</a></i>
         </div>
         <a class='enlace-eliminar' href="{% url 'eliminar-tarea' tarea.id %}">&#x2A2F;</a>
         {% else %}
-        <div class="titulo-tarea">
+        <div class="titulo-tarea" >
             <div class="icono-tarea-incompleta"></div>
-            <a href="{% url 'editar-tarea' tarea.id %}">{{tarea}}</a>
+            <a href="{% url 'editar-tarea' tarea.id %}">{{tarea}} (Tarea Incompleta)</a>
         </div>
         <a class='enlace-eliminar' href="{% url 'eliminar-tarea' tarea.id %}">&#x2A2F;</a>
         {% endif %}
